@@ -14,7 +14,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Pinecone configuration
 pinecone.init(api_key='6348c0b6-eb7a-4b83-8ff9-2c2c6ab11887', environment='gcp-starter')
-index = pinecone.Index('invigptvector')
+index = pinecone.Index('pine-chatbot')
 
 
 def find_match(input):
