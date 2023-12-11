@@ -4,5 +4,4 @@ streamlit_chat
 langchain
 sentence_transformers
 pinecone-client
-openai
-openai-api
+openai==0.28.0
