@@ -11,6 +11,11 @@ import streamlit as st
 from streamlit_chat import message
 from utils import *
 
+import os
+
+openai_api_key = os.environ["OPENAI_API_KEY"]
+
+
 st.subheader("Chatbot Invimatic policy")
 
 if 'responses' not in st.session_state:
@@ -19,7 +24,7 @@ if 'responses' not in st.session_state:
 if 'requests' not in st.session_state:
     st.session_state['requests'] = []
 
-llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="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")
+llm = ChatOpenAI(model_name="gpt-3.5-turbo", openai_api_key="OPENAI_API_KEY")
 
 if 'buffer_memory' not in st.session_state:
     st.session_state.buffer_memory = ConversationBufferWindowMemory(k=3, return_messages=True)
